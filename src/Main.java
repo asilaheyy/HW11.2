@@ -1,24 +1,21 @@
 public class Main {
     // ДЗ 2.
-    public static void OS(int clientOS, int deviceYear){
+    public static void OS(int clientOS, int clientDeviceYear) {
 
-        if (deviceYear<2015 && clientOS == 0){
+        if (clientDeviceYear < 2015 && clientOS == 0) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
-        }
-        if(deviceYear>=2015 && clientOS == 0){
+        } else if (clientDeviceYear >= 2015 && clientOS == 0) {
             System.out.println("Установите приложение для iOS по ссылке.");
-        }
-        if (deviceYear<2015 && clientOS == 1){
+        } else if (clientDeviceYear < 2015 && clientOS == 1) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке.");
-        }
-        if(deviceYear>=2015 && clientOS == 1){
+        } else if (clientDeviceYear >= 2015 && clientOS == 1) {
             System.out.println("Установите приложение для Android по ссылке.");
         }
 
     }
     public static void main(String[] args) {
-      int clientOS = 1;
-      int deviceYear = 2014;
-        OS(clientOS,deviceYear);
+        int clientOS = 1;
+        int clientDeviceYear = 2015;
+        OS(clientOS, clientDeviceYear);
     }
 }
